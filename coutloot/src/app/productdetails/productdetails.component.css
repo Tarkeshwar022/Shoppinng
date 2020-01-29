@@ -1,0 +1,19 @@
+.description{
+    font-weight: bold;
+
+}
+.list_price{
+    color: green;
+    font-weight: bold;
+}
+.label_price{
+    font-weight: bold;
+}
+.pickup_charge{
+    color: orange;
+    font-weight: bold
+    
+}
+.offers{
+    font-weight: bold
+}

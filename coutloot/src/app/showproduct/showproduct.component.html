@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div class="row mb-2">
+        <div class="col-md-3 col-sm-6 " *ngFor="let x of productList.products">
+           
+            <div *ngFor="let i of x.details.variants">
+             <img src="{{x.images.mainImages[0]}}" title="{{x.details.title}}" 
+             style=" width:100%; height: 350px;" (click)='getDetails(x.productId)' />
+                <div>
+                <h5 class="product_varient">{{i.variantName |titlecase}}</h5>
+                    <div class="brandName" >
+                    {{x.details.brand}} 
+                    </div>
+                         <div class="list_price">
+                          {{i.priceDetails.listedPrice | currency:"INR"}}
+                         </div>
+                            <div>
+                                <del> {{i.priceDetails.labelPrice | currency:"INR"}}</del>
+                             </div>
+                                <div class="percent_off">
+                                     Offer {{i.priceDetails.percentOff/100 | percent}}
+                                </div>
+                                <!-- <div>
+                                    Description: {{x.details.description}}<br/>
+                                    </div> -->
+                </div>
+             </div>
+        </div>        
+      </div>
+</div>

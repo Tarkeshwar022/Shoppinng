@@ -1,0 +1,13 @@
+
+.product_varient{
+    color: black;
+}
+.list_price{
+    color: green;
+    font-weight: bold;
+    
+}
+.percent_off{
+    font-weight: bold;
+    color: green
+}

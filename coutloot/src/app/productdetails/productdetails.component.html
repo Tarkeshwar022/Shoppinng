@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <div class="row mb-3">
+        <div class="col-md-5">
+            <img class="img-responsive" src="{{var_product_data.product.images.mainImages[0]}}" title="{{var_product_data.product.details.title}}" style=" width:100%; height: 350px;" />
+        </div>
+        <div class="col-md-7">
+            <div class="row mb-3">
+                <div class="col-xs-2 col-md-2 col-lg-2" *ngFor="let x of var_product_data.product.images.thumbImages">
+                    <img class="img-responsive" src="{{x}}" style="width:50px; height: 50px;" />
+                </div>
+            </div>
+            <div class="description">
+            <h2>{{var_product_data.product.details.description}}</h2>
+            </div>
+                <div>
+                     {{var_product_data.product.details.brand}}
+                     </div>
+                     <div class="list_price">
+                        {{var_product_data.product.details.variants[0].priceDetails.listedPrice | currency :"INR"}}
+                        </div>
+                        <div class="label_price"> 
+                             <del>{{var_product_data.product.details.variants[0].priceDetails.labelPrice | currency :"INR"}}</del>
+                        </div>
+                            <div class="pickup_charge">
+                             {{var_product_data.product.details.variants[0].priceDetails.pickupCharges | currency :"INR"}}
+                            </div>
+                            <div class="offers"> 
+                              {{var_product_data.product.availableOffers[0]}}
+                             </div>
+        </div>
+    </div>
+</div>
+    
+    <!-- {{var_product_data| json}} -->
